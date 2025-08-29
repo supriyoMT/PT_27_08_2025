@@ -52,8 +52,10 @@ print("Scores after replacing index 2 with 55: ", scores)
 copied_score = scores.copy()  # Create a copied list
 print("Copied list of scores:", copied_score)
 
+print("Copied list of scores:", copied_score)
+
 #loop over the list scores to greatete a switch case to print the grade for each score  
-print("Looping over the scores list :")  
+print("Looping over the scores list:")  
 for score in scores:
     match score:
         case num if num > 90:
