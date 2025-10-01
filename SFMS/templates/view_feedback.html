@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head><title>Feedback Records</title></head>
+<body>
+  <h1>All Feedback</h1>
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>Student</th>
+      <th>Course</th>
+      <th>Faculty</th>
+      <th>Rating</th>
+      <th>Comments</th>
+    </tr>
+    {% for f in feedbacks %}
+      <tr>
+        <td>{{ f[1] }}</td> <!-- Student name -->
+        <td>{{ f[2] }}</td> <!-- Course name -->
+        <td>{{ f[3] }}</td> <!-- Faculty name -->
+        <td>{{ f[4] }}</td> <!-- Rating -->
+        <td>{{ f[5] }}</td> <!-- Comments -->
+      </tr>
+    {% endfor %}
+  </table>
+
+  <br>
+  <a href="{{ url_for('download_log') }}">Download Log File</a>
+</body>
+</html>
